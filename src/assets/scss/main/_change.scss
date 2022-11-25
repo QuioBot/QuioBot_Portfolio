@@ -1,0 +1,33 @@
+.change-theme-color {
+    // position: fixed;
+    // position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 1px solid white;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+.background-shape{
+    width: 700px;
+	height: 70px;
+    position:absolute;
+    top: 0;
+    right: 0.1%;
+	background: var(--main-primary-color);
+	-moz-border-radius: 0px 0px  20px 110px;
+	-webkit-border-radius: 0px 0px  20px 110px;
+	border-radius: 0px 0px  20px 110px;
+  z-index: 1;
+
+
+
+  }
+
