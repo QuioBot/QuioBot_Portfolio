@@ -1,7 +1,7 @@
-FROM node:14.18.1-alpine as builder
+FROM node:14.18.1-alpine
 
 # install simple http server for serving static content
-# RUN npm install -g http-server
+RUN npm install -g http-server
 
 # make the 'app' folder the current working directory
 WORKDIR /app
@@ -21,13 +21,6 @@ COPY . .
 # build app for production with minification
 RUN npm run build
 
-# RUN npm install webpack-cli@3.3.12 --force
-
-# EXPOSE 8080
-# CMD [ "http-server", "dist" ]
-
-
-# nginx state for serving content
 FROM nginx:alpine
 # Set working directory to nginx asset directory
 WORKDIR /usr/share/nginx/html
@@ -37,3 +30,6 @@ RUN rm -rf ./*
 COPY --from=builder /app/dist .
 # Containers run nginx with global directives and daemon off
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
+
+# cmt
