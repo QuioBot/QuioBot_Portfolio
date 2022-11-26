@@ -29,7 +29,7 @@ RUN rm -rf ./*
 # Copy static assets from builder stage
 COPY --from=builder /app/dist .
 # Containers run nginx with global directives and daemon off
+
+EXPOSE 8080
+
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
-
-
-# cmt
