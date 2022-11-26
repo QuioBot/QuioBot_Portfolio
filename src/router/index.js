@@ -16,7 +16,7 @@ const routes = [
     name: "HomeDark",
     component: () => import("../views/HomeDark.vue"),
     meta: {
-      title: "Home Dark || Tunis VueJS 3 Personal Portfolio Template",
+      title: "Omar El Ghiba || Porfolio",
     },
   },
   // {
@@ -31,7 +31,7 @@ const routes = [
     path: "/:catchAll(.*)",
     component: NotFound,
     meta: {
-      title: "Not Found || Tunis VueJS 3 Personal Portfolio Template",
+      title: "Not Found",
     },
   },
 ];
