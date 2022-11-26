@@ -1,5 +1,5 @@
 # Name the node stage "builder"
-FROM node:10 AS builder
+FROM node:14.18.1-alpine
 # Set working directory
 WORKDIR /app
 # Copy all files from current directory to working dir in image
