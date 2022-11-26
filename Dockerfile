@@ -1,27 +1,35 @@
-# stage1 as builder
-FROM node:10-alpine as builder
+FROM node:14.18.1-alpine as builder
 
-WORKDIR /vue-ui
+# install simple http server for serving static content
+RUN npm install -g http-server
 
-# Copy the package.json and install dependencies
+# make the 'app' folder the current working directory
+WORKDIR /app
+
+# copy both 'package.json' and 'package-lock.json' (if available)
 COPY package*.json ./
+
+RUN npm install npm@latest -g
+
+# install project dependencies
+
 RUN npm install
 
-# Copy rest of the files
+# copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
 
-# Build the project
+# build app for production with minification
 RUN npm run build
 
-
-FROM nginx:alpine as production-build
-COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
-
-## Remove default nginx index page
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copy from the stahg 1
-COPY --from=builder /vue-ui/dist /usr/share/nginx/html
+FROM nginx:alpine
+# Set working directory to nginx asset directory
+WORKDIR /usr/share/nginx/html
+# Remove default nginx static assets
+RUN rm -rf ./*
+# Copy static assets from builder stage
+COPY --from=builder /app/dist .
+# Containers run nginx with global directives and daemon off
 
 EXPOSE 80
+
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
