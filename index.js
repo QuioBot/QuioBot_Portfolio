@@ -1,11 +1,19 @@
-const express = require('express');
-const app = express();
-const host = 'http://157.245.19.181';
-const port = 8081
+const http = require('http')
+const fs = require('fs')
+const httpPort = 80
 
-// We'll use the public directory to serve the Vue App
-app.use(express.static('public'));
+http.createServer((req, res) => {
+  fs.readFile('index.html', 'utf-8', (err, content) => {
+    if (err) {
+      console.log('We cannot open "index.html" file.')
+    }
 
-app.listen(port, () => {
- console.log(`App listening on ${host}:${port}`);
-});
+    res.writeHead(200, {
+      'Content-Type': 'text/html; charset=utf-8'
+    })
+
+    res.end(content)
+  })
+}).listen(httpPort, () => {
+  console.log('Server listening on: http://localhost:%s', httpPort)
+})
