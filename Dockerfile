@@ -1,4 +1,4 @@
-FROM node:10 AS builder
+FROM node:14.18.1-alpine as builder
 
 # install simple http server for serving static content
 # RUN npm install -g http-server
