@@ -19,6 +19,13 @@ const routes = [
       title: "Omar El Ghiba || Porfolio",
     },
   },
+  {
+    path: "/test",
+    component: NotFound,
+    meta: {
+      title: "Not Found",
+    },
+  },
   // {
   //   path: "/home-light",
   //   name: "HomeLight",
