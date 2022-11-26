@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const host = 'http://localhost';
+const host = 'http://157.245.19.181';
 const port = 8081
 
 // We'll use the public directory to serve the Vue App
