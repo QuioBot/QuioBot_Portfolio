@@ -1,12 +1,45 @@
 <template>
   <main class="yellow ">
+<!--     
+    <div id="showSwitcher" className="demo-sticker" data-bs-toggle="modal"
+          data-bs-target="#helper">
+        <i class="fa fa-gear fa-spin"></i>
+    </div> -->
+
+
+
+    <div
+    class="modal fade"
+    id="helper"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+    >
+      <div class="modal-content-1 dark">
+      
+
+      </div>
+    </div>
+
+  
+  </div>
 
     <header class="header">
+      
       <ul
         class="nav nav-tabs icon-menu d-lg-block revealator-slideup revealator-once revealator-delay1"
         id="myTab"
         role="tablist"
       >
+        <!-- <li id="showSwitcher" class="icon-setting"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+            <i class="fa fa-gear fa-spin"></i>
+        </li>  -->
+
         <li class="icon-box" role="presentation">
           <button class="active" data-bs-toggle="tab" data-bs-target="#home">
             <i class="fa fa-home"></i>
@@ -41,10 +74,6 @@
       </ul>
       
     </header>
-    <!-- End header -->
-    <div class="background-shape"></div>
-
-    <!-- End background shape -->
 
     <div class="tab-content tab-panel_list home" id="myTabContent">
 
@@ -93,12 +122,10 @@
             <!-- {/* Left Side Starts */} -->
             <div class="col-12 col-lg-4">
               <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3">
-                Don't be shy !
+                Contact Us
               </h3>
               <p class="open-sans-font mb-4">
-                Feel free to get in touch with me. I am always open to
-                discussing new projects, creative ideas or opportunities to be
-                part of your visions.
+                If you’d like to know more about my work or process feel free to get in touch.
               </p>
               <AddressInfo />
               <!-- {/* End Address */} -->
@@ -118,8 +145,12 @@
         <!-- {/* End .container */} -->
       </div>
       <!-- End contact content tabs -->
+      
     </div>
+    
   </main>
+
+
 </template>
 
 <script>
@@ -129,6 +160,7 @@ import AddressInfo from "@/components/AddressInfo.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
 import SocialInfo from "@/components/SocialInfo.vue";
 import PortfolioInfo from "@/components/portfolio/PortfolioInfo.vue";
+
 
 export default {
   components: {
@@ -142,7 +174,17 @@ export default {
   data() {
     return {
 
+      // color: null,
+      // colors: ["#00ffda", "#c4066a", "#4169e1", "#ffb400", '#ff4848', "#8a2be2","#73b625","#f72b1c"],
+
+
     };
+  },
+  methods: {
+    add :function(color) {
+        this.root = document.documentElement;
+        this.root.style.setProperty('--main-primary-color' ,color)
+  }
   },
 
   mounted() {

@@ -1,6 +1,7 @@
 <template>
   <div class="row home-details-container align-items-center">
     <div
+
       class="col-lg-4 bg position-fixed d-none d-lg-block hero-img" 
       :style="{ backgroundImage: 'url(' + heroContent.heroImage + ')' }"
     ></div>
@@ -26,7 +27,9 @@
           <span>{{ heroContent.heroDesignation }}</span>
         </h1>
         <p  class="open-sans-font">{{ heroContent.heroDescriptions }}</p>
+
         <button
+        style="margin:5px;"
           class="button"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
@@ -34,6 +37,16 @@
           <span class="button-text">{{ heroContent.heroBtn }}</span>
           <span class="button-icon fa fa-arrow-right"></span>
         </button>
+
+
+        <a
+        style="margin:5px;"
+          class="button"
+          :href="github" target="_blank"
+        >
+          <span class="button-text">{{ heroContent.heroBtn2 }}</span>
+          
+      </a>
         
       </div>
     </div>
@@ -81,20 +94,21 @@ import IndexMain from "../about/IndexMain.vue";
 export default {
   data() {
     return {
+      github : "https://github.com/QuioBot?tab=repositories",
       root: null,
       color: null,
-      colors: ["#00ffda", "#c4066a", "blue", "yellow", '#ff4848'],
+      colors: ["#00ffda", "#c4066a", "#4169e1", "#ffb400", '#ff4848', "#8a2be2","#73b625","#f72b1c"],
       backgroundColor: undefined,
       heroContent: {
         heroImage: require(`@/assets/images/hero/img-mobile.jpg`),
         heroMobileImage: require(`@/assets/images/hero/img-mobile.jpg`),
         heroTitleName: "Omar El Ghiba",
         heroDesignation: "Data Scientist",
-        heroDescriptions: `I'm a Datascientist & front‑end developer focused on
-        crafting clean & user‑friendly experiences, I am passionate about
-        building excellent software that improves the lives of those
-        around me.`,
+        heroDescriptions: `I'm a Data scientist (MLOPS) & Full Stack Web Developer & Devops Developer focused on
+        creating Web Ai Solution End to End Project, I am passionate about building excellent Website that use Machine learning and Deep Learning , Vuejs in Frontend ,
+        Djando ,Fastapi , Php in Backend ,Postgres and Mongodb for Sql and NoSql Databases, Github Action for CI/CD and Kubernetes, Docker, Docker Compose for Deployment.`,
         heroBtn: "more about me",
+        heroBtn2: "Github Repository",
       },
     };
   },
@@ -108,4 +122,5 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

@@ -8,7 +8,7 @@
   <p class="open-sans-font custom-span-contact position-relative">
     <i class="fa fa-envelope-open position-absolute"></i>
     <span class="d-block">mail me</span>
-    <a href="mailto:steve@mail.com">admin@quiobot.com</a>
+    <a href="mailto:steve@mail.com">elghibaomar@gmail.com</a>
   </p>
   <!-- {/* End .custom-span-contact */} -->
 

@@ -23,8 +23,8 @@ export default {
         { id: 5, meta: "Freelance", metaInfo: "Available" },
         { id: 6, meta: "Address", metaInfo: "Morocco" },
         { id: 7, meta: "phone", metaInfo: "+212697856535" },
-        { id: 8, meta: "Email", metaInfo: "admin@quiobot.com" },
-        { id: 9, meta: "Skype", metaInfo: " omar.elghiba" },
+        { id: 8, meta: "Email", metaInfo: "elghibaomar@gmail.com" },
+        // { id: 9, meta: "Skype", metaInfo: " omar.elghiba" },
         { id: 10, meta: "langages", metaInfo: "Arabic, English, French" },
       ],
     };

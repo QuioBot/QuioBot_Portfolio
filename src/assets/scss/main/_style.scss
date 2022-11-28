@@ -1,8 +1,8 @@
 /*
-Template Name: Tunis
+Template Name: Quiobot
 Author: ib-themes
 Author URI: http://themeforest.net/user/ib-themes
-Description: Tunis - Personal Portfolio Vuejs Template
+Description: Quiobot - Personal Portfolio Vuejs Template
 Version: 1.0
 */
 
@@ -48,7 +48,7 @@ html {
   height: 100%;
 }
 :root {
-  --main-primary-color: #ff4848;
+  --main-primary-color: #4169e1;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -501,7 +501,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   position: fixed;
   right: 95%;
   z-index: 3;
-  display: block;
+  display: flex;
   align-items: center;
   top: 50%;
   opacity: 1;
@@ -513,13 +513,13 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   @media (max-width: 991px) {
     left: 0;
     right: auto;
-    bottom: 100;
+    bottom: 0;
     top: auto;
     transform: none;
     width: 100%;
     display: block;
     background: transparent;
-    padding: 12px;
+    padding: 8px;
     z-index: 10;
 
     ul.icon-menu {
@@ -545,6 +545,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
       justify-content: space-between;
     }
   }
+  
 }
 
 .header.hide-header {
@@ -567,7 +568,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   display: flex;
   align-items: center;
   transition: 0.3s;
-  margin: 20px 0;
+  margin: 5px 0;
   border-radius: 30%;
   background: #2b2a2a;
   cursor: pointer;
@@ -581,6 +582,19 @@ body.light .header ul.icon-menu li.icon-box:hover i {
     border-radius: 30%;
     transition: 0.3s;
   }
+}
+.header ul.icon-menu li.icon-setting {
+  width: 70px;
+  height: 50px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  margin: 20px 0;
+  border-top-right-radius: 20px 20px;
+  background: #fff;
+  cursor: pointer;
 }
 .header ul.icon-menu li.icon-box,
 .portfolio-tab-list li {
@@ -2116,6 +2130,7 @@ body.light .main-img-mobile {
   align-items: center;
   justify-content: center;
   z-index: 99;
+  cursor: pointer;
   @media (max-width: 991px) {
     right: 15px;
   }
@@ -2143,6 +2158,11 @@ body.light .main-img-mobile {
       }
     }
   }
+}
+
+#showSwitcher i {
+	font-size:30px;
+	color:white;
 }
 
   

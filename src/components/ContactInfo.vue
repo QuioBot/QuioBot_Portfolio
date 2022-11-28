@@ -1,5 +1,6 @@
 <template>
-  <form ref="form" class="contactform" @submit.prevent="sendEmail">
+
+  <form ref="form" class="contactform" v-on:submit="sendForm">
     <div class="row">
       <div class="col-12 col-md-6">
         <div class="form-group">
@@ -7,12 +8,12 @@
             type="text"
             name="name"
             placeholder="YOUR NAME"
-            v-model="name"
+            v-model="ContactForm.name"
             required
           />
         </div>
       </div>
-      <!-- {/* End .col */} -->
+
 
       <div class="col-12 col-md-6">
         <div class="form-group">
@@ -21,24 +22,10 @@
             name="user_email"
             placeholder="YOUR EMAIL"
             required
-            v-model="email"
+            v-model="ContactForm.email"
           />
         </div>
       </div>
-      <!-- {/* End .col */} -->
-
-      <div class="col-12 col-md-12">
-        <div class="form-group">
-          <input
-            type="text"
-            name="subject"
-            placeholder="YOUR SUBJECT"
-            required
-            v-model="subject"
-          />
-        </div>
-      </div>
-      <!-- {/* End .col */} -->
 
       <div class="col-12">
         <div class="form-group">
@@ -46,65 +33,66 @@
             name="message"
             placeholder="YOUR MESSAGE"
             required
-            v-model="message"
+            v-model="ContactForm.message"
           ></textarea>
         </div>
       </div>
-      <!-- {/* End .col */} -->
 
-      <div class="col-12">
+
+      <div class="col-12 col-md-6">
         <button type="submit" class="button">
           <span class="button-text">Send Message</span>
           <span class="button-icon fa fa-send"></span>
         </button>
       </div>
-      <!-- {/* End .col */} -->
+
+      <div v-if="sent" class="col-12 col-md-6">
+        <div class="form-group">
+          <span>Message Done</span>
+        </div>
+      </div>
+
+
     </div>
   </form>
+
+  
 </template>
 
 <script>
-import emailjs from "@emailjs/browser";
+import axios from 'axios'
+
+const querystring = require("querystring");
 
 export default {
   data() {
     return {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+      sent: false,
+            ContactForm: {
+                name: '',
+                email: '',
+                subject: 'Website Message',
+                message: ''
+              },
     };
   },
   methods: {
-    sendEmail() {
-      emailjs
-        .sendForm(
-          "service_n4mkhz9",
-          "template_ugoztxr",
-          this.$refs.form,
-          "user_vYmDSd9PwIuRXUQEDjYwN",
-          {
-            name: this.name,
-            email: this.email,
-            subject: this.subject,
-            message: this.message,
-          }
-        )
-        .then(
-          (result) => {
-            console.log("SUCCESS!", result.text);
-            alert("Message sent!");
-          },
-          (error) => {
-            console.log("FAILED...", error.text);
-            alert("Message not sent", error);
-          }
-        );
-      this.name = "";
-      this.email = "";
-      this.subject = "";
-      this.message = "";
-    },
-  },
+    sendForm(e) {
+              e.preventDefault()
+              console.log(this.ContactForm)
+              axios.post('https://quioapi.000webhostapp.com/mail_server.php',
+              querystring.stringify(this.ContactForm)).then(() => {
+                this.sent = true
+              })
+            }
+      },
 };
 </script>
+
+<style>
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+</style>
