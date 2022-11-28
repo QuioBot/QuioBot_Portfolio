@@ -47,15 +47,15 @@ jobs:
         run: |
           doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ env.CLUSTER_NAME }}
 
-      - name: Deployment image
+      # - name: Deployment image
+      #   run: |
+      #     kubectl apply -f k8s/apps/portfolio-frontend.yaml 
+      - name: Update Deployment image
         run: |
-          kubectl apply -f k8s/apps/portfolio-frontend.yaml 
-      # - name: Update Deployment image
-      #   run: |
-      #     kubectl set image deployment/portfolio-frontend-deployment portfolio-frontend=elghibaomar/portfolio-frontend:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5}
-      # - name: Wait for rollout to finish
-      #   run: |
-      #     kubectl rollout status deployment/portfolio-frontend-deployment
+          kubectl set image deployment/portfolio-frontend-deployment portfolio-frontend=elghibaomar/portfolio-frontend:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5}
+      - name: Wait for rollout to finish
+        run: |
+          kubectl rollout status deployment/portfolio-frontend-deployment
 
 
 
