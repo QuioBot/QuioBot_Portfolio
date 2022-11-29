@@ -94,7 +94,7 @@ import IndexMain from "../about/IndexMain.vue";
 export default {
   data() {
     return {
-      github : "https://github.com/QuioBot?tab=repositories",
+      github : "https://github.com/omar-elghiba",
       root: null,
       color: null,
       colors: ["#00ffda", "#c4066a", "#4169e1", "#ffb400", '#ff4848', "#8a2be2","#73b625","#f72b1c"],
