@@ -33,7 +33,7 @@ export default {
           id: 2,
           year: "2018 - 2019",
           position: "Web Developer In Digital Marketing",
-          compnayName: "Themeforest",
+          compnayName: "Vecitu",
         //   details: `Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol
         // elit, tempor incididunt`,
         },
