@@ -49,7 +49,7 @@ export default {
         {
           id: 5,
           img: require(`@/assets/images/portfolio/project-5.jpg`),
-          title: "Vuejs - FastAPi - Postgres (Authentication - Sql)",
+          title: "Vuejs - FastAPi - Postgres - Docker - Google Kubernetes Engine (Authentication)",
           project: "Vuejs - FastAPi - Postgres - Docker - Google Kubernetes Engine (Authentication)",
           github: "Go",
           githubLink: "https://github.com/omar-elghiba/Quiobot-Sql-Postgres",
