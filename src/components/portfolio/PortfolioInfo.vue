@@ -84,14 +84,14 @@
 
                           <div class="col-12 col-sm-6 mb-2">
                             <i class="fa fa-external-link pr-2"></i>
-                            <span class="project-label">Frontend </span>:
+                            <span class="project-label">Website </span>:
                             <span class="ft-wt-600 uppercase">
                               <a
-                                :href="portfolio.frontendLink"
+                                :href="portfolio.websiteLink"
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                {{ portfolio.frontend }}
+                                {{ portfolio.website }}
                               </a>
                             </span>
                           </div>
