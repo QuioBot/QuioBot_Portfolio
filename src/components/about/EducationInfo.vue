@@ -54,7 +54,7 @@ export default {
         {
           id: 6,
           year: "2012",
-          degree: "BACHELOR DEGREE IN MATHEMATICAL SCIENCE B",
+          degree: "BACCALAUREATE DEGREE IN MATHEMATICAL SCIENCE B",
           institute: "HASSAN 2 HIGH SCHOOL",
         },
         

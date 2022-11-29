@@ -12,6 +12,8 @@ export default {
           language: "Python,Javascript,Php,Yaml",
           website: "Go",
           websiteLink: "http://bot.omarelghiba.com/#/chatbot",
+          login: "",
+          loginLink: "",
         },
         {
           id: 2,
@@ -22,7 +24,9 @@ export default {
           githubLink: "https://github.com/omar-elghiba/Quibot-Digital-Marketing",
           language: "Python,Javascript,Yaml",
           website: "Go",
-          websiteLink: "http://157.245.17.232/#/email_marketing",
+          websiteLink: "http://bot.omarelghiba.com/#/platform",
+          login: "Go",
+          loginLink: "http://157.245.17.232/#/email_marketing",
         },
         {
           id: 3,
@@ -34,6 +38,8 @@ export default {
           language: "Python,Javascript,Php,Yaml",
           website: "Go",
           websiteLink: "http://bot.omarelghiba.com/#/customer",
+          login: "",
+          loginLink: "",
         },
         {
           id: 4,
@@ -45,6 +51,8 @@ export default {
           language: "Python,Javascript,Php,Yaml",
           website: "",
           websiteLink: "",
+          login: "",
+          loginLink: "",
         },
         {
           id: 5,
@@ -56,6 +64,8 @@ export default {
           language: "Python,Javascript,Sql,Yaml",
           website: "Go",
           websiteLink: "http://demo.omarelghiba.com/",
+          login: "Go",
+          loginLink: "http://demo.omarelghiba.com/#/login",
         },
         {
           id: 6,
@@ -67,6 +77,8 @@ export default {
           language: "Python,Javascript,Nosql",
           website: "",
           websiteLink: "",
+          login: "",
+          loginLink: "",
         },
         // {
         //   id: 7,
