@@ -59,14 +59,14 @@
 
                           <div class="col-12 col-sm-6 mb-2">
                             <i class="fa fa-external-link pr-2"></i>
-                            <span class="project-label">FrontEnd </span>:
+                            <span class="project-label">Github </span>:
                             <span class="ft-wt-600 uppercase">
                               <a
-                                :href="portfolio.frontendLink"
+                                :href="portfolio.githubLink"
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                {{ portfolio.frontend }}
+                                {{ portfolio.github }}
                               </a>
                             </span>
                           </div>
@@ -84,14 +84,14 @@
 
                           <div class="col-12 col-sm-6 mb-2">
                             <i class="fa fa-external-link pr-2"></i>
-                            <span class="project-label">BackEnd </span>:
+                            <span class="project-label">Frontend </span>:
                             <span class="ft-wt-600 uppercase">
                               <a
-                                :href="portfolio.backendLink"
+                                :href="portfolio.frontendLink"
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                {{ portfolio.backend }}
+                                {{ portfolio.frontend }}
                               </a>
                             </span>
                           </div>
