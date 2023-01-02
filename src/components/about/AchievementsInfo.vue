@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       achievementsContent: [
-        { id: 1, title: "9", subTitle1: "years of", subTitle2: "experience in web devlopment" },
+        { id: 1, title: "9", subTitle1: "years of", subTitle2: "experience in web development" },
         { id: 2, title: "2", subTitle1: "years of", subTitle2: "experience in data science" },
         // { id: 3, title: "81", subTitle1: "Happy", subTitle2: "customers" },
         // { id: 4, title: "53", subTitle1: "awards", subTitle2: "won" },

@@ -1,10 +1,10 @@
 <template>
   <main class="yellow">
-    <div className="demo-sticker" title="Swich Dark">
+    <!-- <div className="demo-sticker" title="Swich Dark">
       <a href="/home-dark">
         <i className="fa fa-moon-o" aria-hidden="true"></i>
       </a>
-    </div>
+    </div> -->
     <!-- End switcher -->
 
     <header class="header">
@@ -45,12 +45,12 @@
         </li>
         <!-- End icon-box -->
 
-        <li class="icon-box" role="presentation">
+        <!-- <li class="icon-box" role="presentation">
           <button data-bs-toggle="tab" data-bs-target="#blog">
             <i class="fa fa-comments"></i>
             <h2>Blog</h2>
           </button>
-        </li>
+        </li> -->
         <!-- End icon-box -->
       </ul>
     </header>
@@ -102,17 +102,15 @@
             <!-- {/* Left Side Starts */} -->
             <div class="col-12 col-lg-4">
               <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3">
-                Don't be shy !
+                CONTACT
               </h3>
               <p class="open-sans-font mb-4">
-                Feel free to get in touch with me. I am always open to
-                discussing new projects, creative ideas or opportunities to be
-                part of your visions.
+                If you’d like to know more about my work or process feel free to get in touch.
               </p>
               <AddressInfo />
               <!-- {/* End Address */} -->
 
-              <SocialInfo />
+              <!-- <SocialInfo /> -->
               <!-- {/* End Social */} -->
             </div>
             <!-- {/* Left Side Ends */} -->
@@ -151,8 +149,8 @@ import HeroBanner from "@/components/hero/HeroBanner.vue";
 import IndexMain from "@/components/about/IndexMain.vue";
 import AddressInfo from "@/components/AddressInfo.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
-import SocialInfo from "@/components/SocialInfo.vue";
-import BlogInfo from "@/components/blog/BlogInfo.vue";
+// import SocialInfo from "@/components/SocialInfo.vue";
+// import BlogInfo from "@/components/blog/BlogInfo.vue";
 import PortfolioInfo from "@/components/portfolio/PortfolioInfo.vue";
 
 export default {
@@ -161,8 +159,8 @@ export default {
     IndexMain,
     AddressInfo,
     ContactInfo,
-    SocialInfo,
-    BlogInfo,
+    // SocialInfo,
+    // BlogInfo,
     PortfolioInfo,
   },
   data() {

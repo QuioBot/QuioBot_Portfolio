@@ -22,7 +22,7 @@
 export default {
   setup() {
     return {
-      image404: require(`@/assets/images/hero/bb.png`),
+      image404: require(`@/assets/images/404.jpg`),
     };
   },
 };

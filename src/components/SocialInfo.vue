@@ -24,8 +24,7 @@ export default {
           iconName: "fa fa-youtube",
           link: "https://www.youtube.com/",
         },
-        { id: 4, iconName: "fa fa-instagram",
-         link: "https://instagram.com/" },
+        { id: 4, iconName: "fa fa-dribbble", link: "https://dribbble.com/" },
       ],
     };
   },

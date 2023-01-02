@@ -28,7 +28,7 @@
             <!-- {/* End personal info */} -->
 
             <div class="col-12 mt-1">
-              <a class="button" :href="cv" download>
+              <a class="button" style="margin:50px;" :href="cv" download>
                 <span class="button-text">Download CV</span>
                 <span class="button-icon fa fa-download"></span>
               </a>
@@ -48,6 +48,22 @@
 
       <hr class="separator" />
 
+      <!-- {/* Skills Starts */} -->
+      <!-- <div class="row">
+        <div class="col-12">
+          <h3
+            class="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600"
+          >
+            My Skills
+          </h3>
+        </div>
+        <SkillInfo />
+      </div> -->
+      <!-- {/* Skills Ends */} -->
+
+      <hr class="separator mt-1" />
+
+      <!-- {/* Experience & Education Starts */} -->
       <div class="row">
         <div class="col-12">
           <h3
@@ -67,24 +83,6 @@
           </div>
         </div>
       </div>
-
-      <!-- {/* Skills Starts */} -->
-      <div class="row">
-        <div class="col-12">
-          <h3
-            class="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600"
-          >
-            My Skills
-          </h3>
-        </div>
-        <SkillInfo />
-      </div>
-      <!-- {/* Skills Ends */} -->
-
-      <hr class="separator mt-1" />
-
-      <!-- {/* Experience & Education Starts */} -->
-    
       <!-- {/*  Experience & Education Ends */} -->
     </div>
   </section>
@@ -95,7 +93,7 @@ import AchievementsInfo from "./AchievementsInfo";
 import EducationInfo from "./EducationInfo";
 import ExperienceInfo from "./ExperienceInfo";
 import PersonalInfo from "./PersonalInfo";
-import SkillInfo from "./SkillInfo";
+// import SkillInfo from "./SkillInfo";
 
 export default {
   components: {
@@ -103,7 +101,7 @@ export default {
     EducationInfo,
     ExperienceInfo,
     PersonalInfo,
-    SkillInfo,
+    // SkillInfo,
   },
   data() {
     return {

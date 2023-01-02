@@ -5,7 +5,7 @@
     v-for="skills in skillsContent"
   >
     <div :class="`c100 ${skills.skillClass}`">
-      <span>{{ skills.skillPercent }}</span>
+      <span>{{ skills.skillPercent }}%</span>
       <div class="slice">
         <div class="bar"></div>
         <div class="fill"></div>
@@ -22,18 +22,24 @@ export default {
   data() {
     return {
       skillsContent: [
-        { id: 1, skillClass: "p100", skillPercent: "PYTHON", skillName: "PYTHON" },
-        { id: 1, skillClass: "p100", skillPercent: "Js", skillName: "JAVASCRIPT" },
-        { id: 1, skillClass: "p100", skillPercent: "DJANGO", skillName: "DJANGO" },
-        { id: 1, skillClass: "p100", skillPercent: "VUEJS", skillName: "VUEJS" },
-        { id: 1, skillClass: "p100", skillPercent: "FASTAPI", skillName: "FASTAPI" },
-        { id: 1, skillClass: "p100", skillPercent: "DP", skillName: "Deep Learning" },
-        { id: 1, skillClass: "p100", skillPercent: "ML", skillName: "MACHINE LEARNING" },
-        { id: 1, skillClass: "p100", skillPercent: "DEVOPS", skillName: "DEVOPS" },
-        { id: 1, skillClass: "p100", skillPercent: "MLOPS", skillName: "MLOPS" },
-        { id: 1, skillClass: "p100", skillPercent: "CLOUD", skillName: "CLOUD" },
-        // { id: 1, skillClass: "p100", skillPercent: "ML", skillName: "MACHINE LEARNING" },
-        // { id: 1, skillClass: "p100", skillPercent: "DEVOPS", skillName: "DEVOPS" },
+        { id: 1, skillClass: "p25", skillPercent: "25", skillName: "HTML" },
+        {
+          id: 2,
+          skillClass: "p89",
+          skillPercent: "89",
+          skillName: "JAVASCRIPT",
+        },
+        { id: 3, skillClass: "p70", skillPercent: "70", skillName: "CSS" },
+        { id: 4, skillClass: "p66", skillPercent: "66", skillName: "PHP" },
+        {
+          id: 5,
+          skillClass: "p95",
+          skillPercent: "95",
+          skillName: "WORDPRESS",
+        },
+        { id: 6, skillClass: "p50", skillPercent: "50", skillName: "JQUERY" },
+        { id: 7, skillClass: "p65", skillPercent: "65", skillName: "ANGULAR" },
+        { id: 8, skillClass: "p45", skillPercent: "45", skillName: "REACT" },
       ],
     };
   },

@@ -1,37 +1,37 @@
 import { createRouter, createWebHistory } from "vue-router";
-
+// import Preview from "../views/MainPreview.vue";
 import NotFound from "../views/PageNotFound.vue";
 
 const routes = [
-
+  // {
+  //   path: "/",
+  //   name: "Preview",
+  //   component: Preview,
+  //   meta: {
+  //     title: "Preview || quiobot VueJS 3 Personal Portfolio Template",
+  //   },
+  // },
   {
-    path: "/",
+    path: "/HomeDark",
     name: "HomeDark",
     component: () => import("../views/HomeDark.vue"),
     meta: {
-      title: "Omar El Ghiba || Porfolio",
+      title: "Home Dark || quiobot VueJS 3 Personal Portfolio Template",
     },
   },
   {
-    path: "/test",
-    component: NotFound,
+    path: "/",
+    name: "HomeLight",
+    component: () => import("../views/HomeLight.vue"),
     meta: {
-      title: "Not Found",
+      title: "Home Light || quiobot VueJS 3 Personal Portfolio Template",
     },
   },
-  // {
-  //   path: "/home-light",
-  //   name: "HomeLight",
-  //   component: () => import("../views/HomeLight.vue"),
-  //   meta: {
-  //     title: "Home Light || Quiobot VueJS 3 Personal Portfolio Template",
-  //   },
-  // },
   {
     path: "/:catchAll(.*)",
     component: NotFound,
     meta: {
-      title: "Not Found",
+      title: "Not Found || quiobot VueJS 3 Personal Portfolio Template",
     },
   },
 ];

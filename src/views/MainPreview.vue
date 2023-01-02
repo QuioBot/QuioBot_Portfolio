@@ -2,7 +2,7 @@
   <div>
     <section class="banner text-center">
       <div class="content">
-        <h1>Quiobot</h1>
+        <h1>quiobot</h1>
         <h2>Personal Portfolio VueJS 3 Template</h2>
       </div>
     </section>
@@ -59,7 +59,7 @@
           You are at the right step now
         </h6>
         <h3 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
-          Purchase Quiobot & Build Your Faster
+          Purchase quiobot & Build Your Faster
           <span class="theme-color">VueJS 3</span> &amp;
           <span class="theme-color">Bootstrap 5 </span> Based Portfolio
           Template.
@@ -79,7 +79,7 @@
       <!-- {/* End go_purchase */} -->
 
       <div class="text-center footer_copyright">
-        <h6>Quiobot - Personal Portfolio VueJS 3 Template</h6>
+        <h6>quiobot - Personal Portfolio VueJS 3 Template</h6>
         <h5>
           &copy; {{ new Date().getFullYear() }} Designed with
           <span class="heart">&#10084;</span> by

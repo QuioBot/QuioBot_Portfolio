@@ -1,45 +1,18 @@
 <template>
-  <main class="yellow ">
-<!--     
-    <div id="showSwitcher" className="demo-sticker" data-bs-toggle="modal"
-          data-bs-target="#helper">
-        <i class="fa fa-gear fa-spin"></i>
+  <main class="yellow">
+    <!-- <div className="demo-sticker" title="Swich Light">
+      <a href="/home-light">
+        <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
+      </a>
     </div> -->
-
-
-
-    <div
-    class="modal fade"
-    id="helper"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
-    <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
-    >
-      <div class="modal-content-1 dark">
-      
-
-      </div>
-    </div>
-
-  
-  </div>
+    <!-- End Sticker -->
 
     <header class="header">
-      
       <ul
         class="nav nav-tabs icon-menu d-lg-block revealator-slideup revealator-once revealator-delay1"
         id="myTab"
         role="tablist"
       >
-        <!-- <li id="showSwitcher" class="icon-setting"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal">
-            <i class="fa fa-gear fa-spin"></i>
-        </li>  -->
-
         <li class="icon-box" role="presentation">
           <button class="active" data-bs-toggle="tab" data-bs-target="#home">
             <i class="fa fa-home"></i>
@@ -59,7 +32,7 @@
         <li class="icon-box" role="presentation">
           <button data-bs-toggle="tab" data-bs-target="#portfolio">
             <i class="fa fa-briefcase"></i>
-            <h2>Projects</h2>
+            <h2>PROJECT</h2>
           </button>
         </li>
         <!-- End icon-box -->
@@ -71,12 +44,19 @@
           </button>
         </li>
         <!-- End icon-box -->
+
+        <!-- <li class="icon-box" role="presentation">
+          <button data-bs-toggle="tab" data-bs-target="#blog">
+            <i class="fa fa-comments"></i>
+            <h2>Blog</h2>
+          </button>
+        </li> -->
+        <!-- End icon-box -->
       </ul>
-      
     </header>
+    <!-- End header -->
 
     <div class="tab-content tab-panel_list home" id="myTabContent">
-
       <!-- Start Hero content tabs -->
       <div class="tab-pane home fade show active" id="home">
         <div class="container-fluid main-container container-home p-0">
@@ -98,13 +78,13 @@
       </div>
       <!-- End about content tabs -->
 
-      <div class="tab-pane fade portfolio professional" id="portfolio" >
+      <div class="tab-pane fade portfolio professional" id="portfolio">
         <div
           class="title-section text-left text-sm-center"
           data-aos="fade-up"
           data-aos-duration="1200"
         >
-          <h1>my <span>projects</span></h1>
+          <h1>my <span>portfolio</span></h1>
           <span class="title-bg">works</span>
         </div>
         <!-- {/* End title */} -->
@@ -143,14 +123,24 @@
           </div>
         </div>
         <!-- {/* End .container */} -->
+      </div>      <!-- End contact content tabs -->
+
+      <div class="tab-pane fade blog" id="blog">
+        <div class="title-section text-left text-sm-center">
+          <h1>my <span>blog</span></h1>
+          <span class="title-bg">posts</span>
+        </div>
+        <div class="container">
+          <!-- {/* Articles Starts */} -->
+          <div class="row pb-50">
+            <BlogInfo />
+          </div>
+          <!-- {/* Articles Ends */} -->
+        </div>
       </div>
-      <!-- End contact content tabs -->
-      
+      <!-- End blog content tabs -->
     </div>
-    
   </main>
-
-
 </template>
 
 <script>
@@ -159,8 +149,8 @@ import IndexMain from "@/components/about/IndexMain.vue";
 import AddressInfo from "@/components/AddressInfo.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
 import SocialInfo from "@/components/SocialInfo.vue";
+import BlogInfo from "@/components/blog/BlogInfo.vue";
 import PortfolioInfo from "@/components/portfolio/PortfolioInfo.vue";
-
 
 export default {
   components: {
@@ -169,34 +159,11 @@ export default {
     AddressInfo,
     ContactInfo,
     SocialInfo,
+    BlogInfo,
     PortfolioInfo,
   },
   data() {
-    return {
-
-      // color: null,
-      // colors: ["#00ffda", "#c4066a", "#4169e1", "#ffb400", '#ff4848', "#8a2be2","#73b625","#f72b1c"],
-
-
-    };
+    return {};
   },
-  methods: {
-    add :function(color) {
-        this.root = document.documentElement;
-        this.root.style.setProperty('--main-primary-color' ,color)
-  }
-  },
-
-  mounted() {
-    document.body.classList.add("dark");
-  },
-  unmounted() {
-    document.body.classList.remove("light");
-  },
-  
 };
 </script>
-<style>
-
-</style>
-
